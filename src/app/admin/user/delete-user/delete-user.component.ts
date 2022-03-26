@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-delete-user',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activated: ActivatedRoute) {
+    this.activated.params.subscribe(
+      (data) => {
+        console.log(data)
+      }
+    )
+  }
 
   ngOnInit(): void {
   }

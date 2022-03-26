@@ -1,1 +1,11 @@
-<p>sidemenu works!</p>
+<nav>
+  <a class="simpleLink" [routerLink]="['/']" >Retour accueil</a>
+  <ul id="sideMenu">
+    <li><a [routerLink]="['dashboard']">> DashBoard</a></li>
+    <li>> User</li>
+    <ul>
+      <li><a [routerLink]="['user']">Liste</a></li>
+      <li><a [routerLink]="['user/add']">Ajouter un utilisateur</a></li>
+    </ul>
+  </ul>
+</nav>
